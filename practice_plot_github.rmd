@@ -14,7 +14,8 @@ library(tidyverse)
 
 ```{r}
 ggplot(iris, aes(x=Sepal.Length, y=Sepal.Width)) +
-  geom_bar(stat = "identity", fill= "blue") -> Sepal_plot
+  geom_bar(stat = "identity", fill= "blue") + 
+  labs(x= "Sepal Length", y="Sepal Width")-> Sepal_plot
 Sepal_plot
 
 ggsave("practice_plot.png", Sepal_plot)
